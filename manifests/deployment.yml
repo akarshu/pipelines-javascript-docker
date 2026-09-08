@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akarshupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akarshupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: akarshupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: akarshupipelinesjavascriptdocker 
+          image: akstestcontainer.azurecr.io/akarshupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
